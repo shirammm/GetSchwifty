@@ -4,6 +4,10 @@ export class GetSchwiftyManager {
     }
 
     start() {
+        this.newGame();
+    }
+
+    newGame(){
         let size = this.dto.boardSizeFromUser();
         let table = this.dto.initializeTableFundamentals(size, size);
         do {

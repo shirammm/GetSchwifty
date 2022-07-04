@@ -1,4 +1,3 @@
-
 export async function isGameOver(table) {
     let rows = table.length;
     let columns = table[0].length;
