@@ -3,7 +3,7 @@ import { createButtonsAsTableElements } from "../Initializations/Elements/Button
 import { clickOnButton } from "../Elements/Buttons/ClickOnButton.js";
 import { isGameOver } from "../GameOver/GameOverChecker.js";
 import { hideTheLastCell } from "../Initializations/HiddenCell/LastCellHider.js";
-import { generateNumericalColorfulBackground } from "../Initializations/Backgrounds/NumericalNumericalBackground.js";
+import { generateNumericalColorfulBackground } from "../Initializations/Backgrounds/NumericalColorfulBackground.js";
 import { GetSchwiftyManager } from "../GameManager/GetSchwiftyManager.js";
 
 var rows = 3;
@@ -22,5 +22,4 @@ let gameManager = new GetSchwiftyManager(initializeTableFundamentals,
                                         initializeElementsBackground,
                                         hideUnnecessaryCells,
                                         gameOverChecker);
-
 gameManager.start(rows, columns);
