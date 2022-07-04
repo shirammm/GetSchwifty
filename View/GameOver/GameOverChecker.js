@@ -1,4 +1,4 @@
-export function isGameOver(table) {
+export async function isGameOver(table) {
     let rows = table.length;
     let columns = table[0].length;
     for(let i=0; i<rows; i++) {
@@ -11,6 +11,7 @@ export function isGameOver(table) {
             }
         }
     }
+    await new Promise((resolve, reject) => setTimeout(resolve, 300));
     window.alert("you won!");
     return true;
 }
