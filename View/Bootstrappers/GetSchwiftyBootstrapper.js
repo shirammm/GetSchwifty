@@ -7,6 +7,7 @@ import { generateNumericalColorfulBackground } from "../Initializations/Backgrou
 import { shuffle } from "../Restart/Shuffler.js";
 import { isSolveable } from "../Valids/ValidSolveableBoard.js";
 import { askForPositiveInteger } from "../InteractionWithUser/AskInfoFromUser.js";
+import { GameManagerDTO } from "../GameManager/GameManagerDTO.js";
 import { GetSchwiftyManager } from "../GameManager/GetSchwiftyManager.js";
 
 let initializeTableFundamentals = createTableFundamentals;
@@ -19,7 +20,7 @@ let shuffler = shuffle;
 let checkTableValidity = isSolveable;
 let boardSizeFromUser = askForPositiveInteger;
 
-let gameManager = new GetSchwiftyManager(initializeTableFundamentals,
+let managerDTO = new GameManagerDTO(initializeTableFundamentals,
                                         initializeElements,
                                         clickOnElement,
                                         initializeElementsBackground,
@@ -28,4 +29,6 @@ let gameManager = new GetSchwiftyManager(initializeTableFundamentals,
                                         shuffler,
                                         checkTableValidity,
                                         boardSizeFromUser);
+let gameManager = new GetSchwiftyManager(managerDTO);
+
 gameManager.start();
