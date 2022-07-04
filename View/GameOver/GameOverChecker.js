@@ -1,3 +1,4 @@
+
 export async function isGameOver(table) {
     let rows = table.length;
     let columns = table[0].length;
@@ -12,6 +13,5 @@ export async function isGameOver(table) {
         }
     }
     await new Promise((resolve, reject) => setTimeout(resolve, 300));
-    window.alert("you won!");
-    return true;
+    return true;    
 }
