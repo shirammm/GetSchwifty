@@ -2,7 +2,7 @@ import { createTableFundamentals } from "../Initializations/Table/BoardGenerator
 import { createButtonsAsTableElements } from "../Initializations/Elements/Buttons.js";
 import { clickOnButton } from "../Elements/Buttons/ClickOnButton.js";
 import { isGameOver } from "../GameOver/GameOverChecker.js";
-import { hideTheLastCell } from "../Initializations/HiddenCell/LastCellHider.js";
+import { hideTheLastCell } from "../Initializations/HiddenCells/LastCellHider.js";
 import { generateNumericalColorfulBackground } from "../Initializations/Backgrounds/NumericalColorfulBackground.js";
 import { shuffle } from "../Restart/Shuffler.js";
 import { isSolveable } from "../Valids/ValidSolveableBoard.js";
