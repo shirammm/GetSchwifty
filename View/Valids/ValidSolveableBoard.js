@@ -23,7 +23,7 @@ function getCellReversals(table, row, column, isEven) {
     let emptyCellValue = table.length * table[0].length - 1;
     if(cell.elementDesignatedLocation == emptyCellValue) {
         if (isEven) {
-            return row+1;
+            return row + 1;
         }
         else {
         return 0;
