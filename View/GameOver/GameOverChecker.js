@@ -10,8 +10,9 @@ export async function isGameOver(table) {
             if(cellLocation != elementDesignatedLocation) {
                 return false;
             }
-        }
+        }   
     }
-    await new Promise((resolve, reject) => setTimeout(resolve, 300));
+    await new Promise((resolve) => setTimeout(resolve, 300));
+    window.alert("game over!");
     return true;    
 }
