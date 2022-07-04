@@ -7,6 +7,7 @@ function generateRandomInt(maxLimit) {
 }
 
 export function createTableFundamentals(rows, columns) {
+    console.log(rows, columns);
     let optionalNumbers = [...Array(rows*columns).keys()];
     let table = [];
     for(let i=0; i<rows; i++) {

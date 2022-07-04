@@ -6,7 +6,8 @@ export class GetSchwiftyManager {
                  hideUnnecessaryCells,
                  gameOverChecker,
                  shuffler,
-                 checkTableValidity){
+                 checkTableValidity,
+                 boardSizeFromUser){
         this.initializeTableFundamentals = initializeTableFundamentals;
         this.initializeElements = initializeElements;
         this.clickOnElementFunction = clickOnElementFunction;
@@ -15,16 +16,14 @@ export class GetSchwiftyManager {
         this.gameOverChecker = gameOverChecker;
         this.shuffler = shuffler;
         this.checkTableValidity = checkTableValidity;
+        this.boardSizeFromUser = boardSizeFromUser;
     }
 
-    start(rows, columns) {
-        let table = this.initializeTableFundamentals(rows, columns);
-        // while(this.checkTableValidity(table) == false){
-        //     this.shuffler(table);
-        // }
+    start() {
+        let size = this.boardSizeFromUser();
+        let table = this.initializeTableFundamentals(size, size);
         do {
             this.shuffler(table);
-            console.log("again")
         } while(!this.checkTableValidity(table));
         this.initializeElements(table, this.clickOnElementFunction, this.gameOverChecker);
         this.initializeElementsBackground(table);

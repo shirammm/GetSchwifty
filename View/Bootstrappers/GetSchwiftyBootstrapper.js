@@ -6,10 +6,8 @@ import { hideTheLastCell } from "../Initializations/HiddenCell/LastCellHider.js"
 import { generateNumericalColorfulBackground } from "../Initializations/Backgrounds/NumericalColorfulBackground.js";
 import { shuffle } from "../Restart/Shuffler.js";
 import { isSolveable } from "../Valids/ValidSolveableBoard.js";
+import { askForPositiveInteger } from "../InteractionWithUser/AskInfoFromUser.js";
 import { GetSchwiftyManager } from "../GameManager/GetSchwiftyManager.js";
-
-var rows = 3;
-var columns = 3;
 
 let initializeTableFundamentals = createTableFundamentals;
 let initializeElements = createButtonsAsTableElements;
@@ -19,6 +17,7 @@ let hideUnnecessaryCells = hideTheLastCell;
 let gameOverChecker = isGameOver;
 let shuffler = shuffle;
 let checkTableValidity = isSolveable;
+let boardSizeFromUser = askForPositiveInteger;
 
 let gameManager = new GetSchwiftyManager(initializeTableFundamentals,
                                         initializeElements,
@@ -27,5 +26,6 @@ let gameManager = new GetSchwiftyManager(initializeTableFundamentals,
                                         hideUnnecessaryCells,
                                         gameOverChecker,
                                         shuffler,
-                                        checkTableValidity);
-gameManager.start(rows, columns);
+                                        checkTableValidity,
+                                        boardSizeFromUser);
+gameManager.start();
