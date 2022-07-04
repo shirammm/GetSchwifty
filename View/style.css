@@ -1,0 +1,12 @@
+.buttonInTable {
+    font-size: x-large;
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    border: 3px;
+    border-color: white;
+}
+
+.emptyCell {
+    visibility: hidden;
+}
